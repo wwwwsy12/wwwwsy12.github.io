@@ -19,13 +19,15 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
+    <meta name="description" content="pwnpwn知识点pwn例题NSSCTF[HNCTF 2022 Week1]ret2shellcodere2shellcode:控制执行流到shellcode。 不存在后门函数，所以要自己构造后门函数，然后劫持执行流返回执行我们构造的代码。 主要的过程如下： （1）构造shellcode通过溢出放到程序某片存储空间上（储存空间具有可执行权限） （2）将返回地址劫持到构造的shellcode地址使得">
+<meta property="og:type" content="article">
 <meta property="og:title" content="pwn">
 <meta property="og:url" content="http://example.com/2024/10/27/pwn/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="pwnpwn知识点pwn例题NSSCTF[HNCTF 2022 Week1]ret2shellcodere2shellcode:控制执行流到shellcode。 不存在后门函数，所以要自己构造后门函数，然后劫持执行流返回执行我们构造的代码。 主要的过程如下： （1）构造shellcode通过溢出放到程序某片存储空间上（储存空间具有可执行权限） （2）将返回地址劫持到构造的shellcode地址使得">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-27T08:40:09.000Z">
-<meta property="article:modified_time" content="2024-10-27T08:41:31.063Z">
+<meta property="article:modified_time" content="2024-10-27T08:43:51.704Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -220,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          115 字
         
       </span>
     
@@ -273,7 +275,12 @@
             
               <div class="markdown-body">
                 
-                
+                <h1 id="pwn"><a href="#pwn" class="headerlink" title="pwn"></a>pwn</h1><h2 id="pwn知识点"><a href="#pwn知识点" class="headerlink" title="pwn知识点"></a>pwn知识点</h2><h2 id="pwn例题"><a href="#pwn例题" class="headerlink" title="pwn例题"></a>pwn例题</h2><h3 id="NSSCTF"><a href="#NSSCTF" class="headerlink" title="NSSCTF"></a>NSSCTF</h3><h4 id="HNCTF-2022-Week1-ret2shellcode"><a href="#HNCTF-2022-Week1-ret2shellcode" class="headerlink" title="[HNCTF 2022 Week1]ret2shellcode"></a>[HNCTF 2022 Week1]ret2shellcode</h4><p>re2shellcode:控制执行流到shellcode。</p>
+<p>不存在后门函数，所以要自己构造后门函数，然后劫持执行流返回执行我们构造的代码。</p>
+<p>主要的过程如下：</p>
+<p>（1）构造shellcode通过溢出放到程序某片存储空间上（储存空间具有可执行权限）</p>
+<p>（2）将返回地址劫持到构造的shellcode地址使得程序开始执行恶意代码 </p>
+
                 
               </div>
             
